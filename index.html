@@ -19,18 +19,15 @@
         .jumbotron {
             background-color: #343a40;
             color: #ffffff;
+            margin-bottom: 0; /* Remove default margin */
         }
 
-        .skills {
-            background-color: #ffffff;
+        .skills, .contact {
             padding: 20px;
-            margin: 20px 0;
         }
 
-        .contact {
-            background-color: #f8f9fa;
-            padding: 20px;
-            margin: 20px 0;
+        .whatsapp-button, .linkedin-button, .cv-button {
+            margin-bottom: 10px;
         }
 
         .whatsapp-button {
@@ -105,96 +102,103 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Muhammad Hidayaturrohman</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+        <div class="container">
+            <a class="navbar-brand" href="#">Muhammad Hidayaturrohman</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Welcome Section -->
     <div id="home" class="jumbotron jumbotron-fluid">
         <div class="container text-center">
-            <h1 class="display-4">Hello, I'm Muhammad Hidayaturrohman</h1>
-            <p class="lead">Software Engineer</p>
+            <h3>Software Engineer</h3>
         </div>
     </div>
 
     <!-- Skills Section -->
-    <div id="skills" class="container skills">
-        <h2 class="text-center">Skills</h2>
-        <p class="text-center">Here are some of my skills:</p>
-        <!-- Add your skills here -->
-        <div class="row">
-            <div class="col-md-3">
-                <h4>Programming Languages</h4>
-                <ul>
-                    <li>PHP (CodeIgniter,Laravel,Lumen,yii)</li>
-                    <li>JavaScript (Node,Express,Ext,Vue)</li>
-                    <li>Ruby (Ruby On Rails)</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Server & Databases</h4>
-                <ul>
-                    <li>AWS</li>
-                    <li>Cpanel</li>
-                    <li>MySql</li>
-                    <li>PostgreSQL</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4> No-Code Development</h4>
-                <ul>
-                    <li>Wordpress</li>
-                    <li>WooCommerce</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Other Skills</h4>
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Team Collaboration</li>
-                    <li>Time Management</li>
-                    <li>Mentoring</li>
-                </ul>   
+    <div id="skills" class="container-fluid skills">
+        <div class="container">
+            <h2 class="text-center">Skills</h2>
+            <p class="text-center">Here are some of my skills:</p>
+            <!-- Add your skills here -->
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>PHP (CodeIgniter,Laravel,Lumen,yii)</li>
+                        <li>JavaScript (Node,Express,Ext,Vue)</li>
+                        <li>Ruby (Ruby On Rails)</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Server & Databases</h4>
+                    <ul>
+                        <li>AWS</li>
+                        <li>Cpanel</li>
+                        <li>MySql</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4> No-Code Development</h4>
+                    <ul>
+                        <li>Wordpress</li>
+                        <li>WooCommerce</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Other Skills</h4>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Time Management</li>
+                        <li>Mentoring</li>
+                        <li>Jira Software</li>
+                        <li>Datadog</li>
+                    </ul>   
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Contact Section -->
-    <div id="contact" class="container contact">
-        <h2 class="text-center">Contact</h2>
-        <p class="text-center">Feel free to reach out to me:</p>
-        <!-- Add your contact information and form here -->
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form>
-                    <a href="https://api.whatsapp.com/send?phone=6281382509259" target="_blank" class="whatsapp-button">
-                        <span>Contact us on WhatsApp</span>
-                    </a>
-                    &nbsp;
-                    <a href="https://www.linkedin.com/in/muhammad-hidayaturrohman-0a1707a8/" target="_blank" class="linkedin-button">
-                        <span>Contact us on Linkedin</span>
-                    </a>
-                    &nbsp;
-                    <a href="https://drive.google.com/file/d/1BGxugF7xgGb6K6DcFRShgoOLUTdaqaBe/view?usp=sharing" target="_blank" class="cv-button">
-                        <span>Download CV</span>
-                    </a>
-                </form>
+    <div id="contact" class="container-fluid contact">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center">Feel free to reach out to me:</p>
+            <!-- Add your contact information and form here -->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <a href="https://api.whatsapp.com/send?phone=6281382509259" target="_blank" class="whatsapp-button">
+                            <span>Contact us on WhatsApp</span>
+                        </a>
+                        &nbsp;
+                        <a href="https://www.linkedin.com/in/muhammad-hidayaturrohman-0a1707a8/" target="_blank" class="linkedin-button">
+                            <span>Contact us on Linkedin</span>
+                        </a>
+                        &nbsp;
+                        <a href="https://drive.google.com/file/d/1BGxugF7xgGb6K6DcFRShgoOLUTdaqaBe/view?usp=sharing" target="_blank" class="cv-button">
+                            <span>Download CV</span>
+                        </a>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
