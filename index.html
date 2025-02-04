@@ -2,300 +2,328 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Muhammad Hidayaturrohman - Personal Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Muhammad Hidayaturrohman - Personal Website</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    <!-- Custom CSS -->
-    <style>
-        /* Add your custom styles here */
-        .card-body {
-            text-align: center;
-        }
-        body {
-            background-color: #f8f9fa;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 
-        .jumbotron {
-            background-color: #343a40;
-            color: #ffffff;
-            margin-bottom: 0; /* Remove default margin */
-        }
+  <!-- Custom CSS -->
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f7f9;
+      color: #333;
+    }
 
-        .skills, .contact {
-            padding: 20px;
-        }
+    /* Navigation Bar */
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        .whatsapp-button, .linkedin-button, .cv-button {
-            margin-bottom: 10px;
-        }
+    /* Jumbotron / Welcome Section */
+    .jumbotron {
+      background: linear-gradient(135deg, #343a40, #23272b);
+      color: #fff;
+      padding: 4rem 2rem;
+      margin-bottom: 0;
+    }
 
-        .whatsapp-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            background-color: #25d366;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
+    .jumbotron h1,
+    .jumbotron p {
+      font-weight: 600;
+    }
 
-        .whatsapp-button:hover {
-            background-color: #128C7E;
-        }
+    /* Section Spacing */
+    section {
+      padding: 60px 0;
+    }
 
-        .whatsapp-button span {
-            font-size: 16px;
-            font-weight: bold;
-        }
+    section h2 {
+      margin-bottom: 40px;
+    }
 
-        .linkedin-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            background-color: #0a66c2;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
+    /* Skills Section */
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .linkedin-button:hover {
-            background-color: #128C7E;
-        }
+    .skills li::before {
+      content: "✓ ";
+      color: #007bff;
+    }
 
-        .linkedin-button span {
-            font-size: 16px;
-            font-weight: bold;
-        }
+    /* Portfolio Cards */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+    }
 
-        .cv-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            background-color: #161717;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        .cv-button:hover {
-            background-color: #128C7E;
-        }
+    .card-body a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 600;
+    }
 
-        .cv-button span {
-            font-size: 16px;
-            font-weight: bold;
-        }
+    .card-body a:hover {
+      color: #0056b3;
+    }
 
-        .container-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+    .container-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container-image img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 100px;
+    }
+
+    /* Contact Buttons */
+    .whatsapp-button,
+    .linkedin-button,
+    .cv-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-button {
+      background-color: #25d366;
+      color: #fff;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+      color: #fff;
+    }
+
+    .linkedin-button {
+      background-color: #0077b5;
+      color: #fff;
+    }
+
+    .linkedin-button:hover {
+      background-color: #005582;
+      color: #fff;
+    }
+
+    .cv-button {
+      background-color: #161717;
+      color: #fff;
+    }
+
+    .cv-button:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #343a40;
+      color: #aaa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Muhammad Hidayaturrohman</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Welcome Section -->
-    <div id="home" class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
-            <h3>Software Engineer</h3>
-        </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Muhammad Hidayaturrohman</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Skills Section -->
-    <div id="skills" class="container-fluid skills">
-        <div class="container">
-            <h2 class="text-center">Skills</h2>
-            <p class="text-center">Here are some of my skills:</p>
-            <!-- Add your skills here -->
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>Programming Languages</h4>
-                    <ul>
-                        <li>PHP (CodeIgniter,Laravel,Lumen,yii)</li>
-                        <li>JavaScript (Node,Express,Ext,Vue,jQuery)</li>
-                        <li>Ruby (Ruby On Rails)</li>
-                        <li>CSS (Bootstrap)</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h4>Server & Databases</h4>
-                    <ul>
-                        <li>AWS</li>
-                        <li>Cpanel</li>
-                        <li>MySql</li>
-                        <li>PostgreSQL</li>
-                        <li>SQL Server</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h4> No-Code Development</h4>
-                    <ul>
-                        <li>Wordpress</li>
-                        <li>WooCommerce</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h4>Tools</h4>
-                    <ul>
-                        <li>Trello</li>
-                        <li>Jira</li>
-                        <li>Docker</li>
-                        <li>Ubuntu</li>
-                        <li>Github</li>
-                        <li>Gitlab</li>
-                        <li>Postman</li>
-                        <li>SonarCube</li>
-                    </ul>   
-                </div>
-            </div>
-        </div>
+  <!-- Welcome Section -->
+  <section id="home" class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">Muhammad Hidayaturrohman</h1>
+      <p class="lead">Software Engineer</p>
     </div>
+  </section>
 
-    <!-- Portfolio Section -->
-    <div id="portfolio" class="container-fluid">
-        <div class="container">
-            <h2 class="text-center">Portfolio</h2>
-            <p class="text-center">Check out some of my projects:</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm container-image">
-                        <img src="https://iqralabs.co.id/assets/logo-primary-8774f89a.png" width="200" height="50" alt="Project 1" class="img-fluid">
-                        <div class="card-body">
-                            <a href="https://iqralabs.co.id/" target="_blank">
-                                <span><b>Visit website iqralabs</b></span>
-                            </a>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm container-image">
-                        <img src="https://vissasa.id/wp-content/uploads/2023/06/logovissasa2.png" width="200" height="50" alt="Project 1" class="img-fluid">
-                        <div class="card-body">
-                            <a href="https://vissasa.id/" target="_blank">
-                                <span><b>Visit website vissasa</b></span>
-                            </a>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm container-image">
-                        <img src="https://romaxinternusa.com/wp-content/uploads/2024/04/Picture1.png" width="200" height="50" alt="Project 1" class="img-fluid">
-                        <div class="card-body">
-                            <a href="https://romaxinternusa.com/" target="_blank">
-                                <span><b>Visit website romaxinternusa</b></span>
-                            </a>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm container-image">
-                        <img src="https://img.era.id/OF4HwTHEYn-MhWQ3r8MNqp4KwfePDSUCrhkr5c0idq8/rs:fill:95:24/g:sm/bG9jYWw6Ly8vc2V0dGluZ3MvU2VwdGVtYmVyMjAyMi9qczFONTFBWlVtWWNKRzN3MnNxbi5wbmc.png" width="200" height="50" alt="Project 1" class="img-fluid">
-                        <div class="card-body">
-                            <a href="https://era.id/" target="_blank">
-                                <span><b>Visit website era</b></span>
-                            </a>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm container-image">
-                        <img src="https://imgsrv2.voi.id/3EYqG_W4eoUoUbvpd9gZitNCwQLZJBbJ9juEB37CHbI/fill/72/37/sm/1/bG9jYWw6Ly8vaW1hZ2VzL2xvZ28vbG9nby13bS12b2kucG5n.png" width="200" height="50" alt="Project 1" class="img-fluid">
-                        <div class="card-body">
-                            <a href="https://voi.id/" target="_blank">
-                                <span><b>Visit website voi</b></span>
-                            </a>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="text-center">Skills</h2>
+      <p class="text-center mb-5">Here are some of my skills:</p>
+      <div class="row">
+        <div class="col-md-3">
+          <h4>Programming Languages</h4>
+          <ul>
+            <li>PHP (CodeIgniter, Laravel, Lumen, Yii)</li>
+            <li>JavaScript (Node, Express, Vue, jQuery)</li>
+            <li>Ruby (Ruby on Rails)</li>
+            <li>CSS (Bootstrap)</li>
+          </ul>
         </div>
-    </div>
-
-
-    <!-- Contact Section -->
-    <div id="contact" class="container-fluid contact">
-        <div class="container">
-            <h2 class="text-center">Contact</h2>
-            <p class="text-center">Feel free to reach out to me:</p>
-            <!-- Add your contact information and form here -->
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <a href="https://api.whatsapp.com/send?phone=6281382509259" target="_blank" class="whatsapp-button">
-                            <span>WhatsApp</span>
-                        </a>
-                        &nbsp;
-                        <a href="https://www.linkedin.com/in/muhammad-hidayaturrohman-0a1707a8/" target="_blank" class="linkedin-button">
-                            <span>Linkedin</span>
-                        </a>
-                        &nbsp;
-                        <a href="https://drive.google.com/file/d/1BGxugF7xgGb6K6DcFRShgoOLUTdaqaBe/view?usp=sharing" target="_blank" class="cv-button">
-                            <span>Download CV</span>
-                        </a>
-                    </form>
-                </div>
-            </div>
+        <div class="col-md-3">
+          <h4>Server &amp; Databases</h4>
+          <ul>
+            <li>AWS</li>
+            <li>CPanel</li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>SQL Server</li>
+          </ul>
         </div>
+        <div class="col-md-3">
+          <h4>No-Code Development</h4>
+          <ul>
+            <li>WordPress</li>
+            <li>WooCommerce</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>Tools</h4>
+          <ul>
+            <li>Trello</li>
+            <li>Jira</li>
+            <li>Docker</li>
+            <li>Ubuntu</li>
+            <li>GitHub</li>
+            <li>GitLab</li>
+            <li>Postman</li>
+            <li>SonarCube</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="text-center">Portfolio</h2>
+      <p class="text-center mb-5">Check out some of my projects:</p>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="container-image">
+              <img src="https://iqralabs.co.id/assets/logo-primary-8774f89a.png" alt="Iqralabs">
+            </div>
+            <div class="card-body text-center">
+              <a href="https://iqralabs.co.id/" target="_blank">Visit Website Iqralabs</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="container-image">
+              <img src="https://vissasa.id/wp-content/uploads/2023/06/logovissasa2.png" alt="Vissasa">
+            </div>
+            <div class="card-body text-center">
+              <a href="https://vissasa.id/" target="_blank">Visit Website Vissasa</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="container-image">
+              <img src="https://romaxinternusa.com/wp-content/uploads/2024/04/Picture1.png" alt="Rromaxinternusa">
+            </div>
+            <div class="card-body text-center">
+              <a href="https://romaxinternusa.com/" target="_blank">Visit Website Rromaxinternusa</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="container-image">
+              <img src="https://img.era.id/OF4HwTHEYn-MhWQ3r8MNqp4KwfePDSUCrhkr5c0idq8/rs:fill:95:24/g:sm/bG9jYWw6Ly8vc2V0dGluZ3MvU2VwdGVtYmVyMjAyMi9qczFONTFBWlVtWWNKRzN3MnNxbi5wbmc.png" alt="Era">
+            </div>
+            <div class="card-body text-center">
+              <a href="https://era.id/" target="_blank">Visit Website Era</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="container-image">
+              <img src="https://imgsrv2.voi.id/3EYqG_W4eoUoUbvpd9gZitNCwQLZJBbJ9juEB37CHbI/fill/72/37/sm/1/bG9jYWw6Ly8vaW1hZ2VzL2xvZ28vbG9nby13bS12b2kucG5n.png" alt="Voi">
+            </div>
+            <div class="card-body text-center">
+              <a href="https://voi.id/" target="_blank">Visit Website Voi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <p class="text-center mb-5">Feel free to reach out to me:</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <a href="https://api.whatsapp.com/send?phone=6281382509259" target="_blank" class="whatsapp-button">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/muhammad-hidayaturrohman-0a1707a8/" target="_blank"
+            class="linkedin-button">LinkedIn</a>
+          <a href="https://drive.google.com/file/d/1BGxugF7xgGb6K6DcFRShgoOLUTdaqaBe/view?usp=sharing" target="_blank"
+            class="cv-button">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Muhammad Hidayaturrohman. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
