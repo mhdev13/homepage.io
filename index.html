@@ -14,6 +14,56 @@
 
   <!-- Custom CSS -->
   <style>
+    /* Portfolio Styles */
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .portfolio-item img {
+      transition: transform 0.4s ease;
+      width: 100%;
+      display: block;
+    }
+    
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .portfolio-item:hover .overlay {
+      opacity: 1;
+    }
+    
+    .overlay a {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+    
+    .overlay a:hover {
+      background-color: #f1f1f1;
+    }
+
     /* Global Styles */
     body {
       font-family: 'Montserrat', sans-serif;
@@ -230,71 +280,62 @@
       </div>
     </div>
   </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <h2 class="text-center">Portfolio</h2>
-      <p class="text-center mb-5">Check out some of my projects:</p>
-      <div class="row">
-        <!-- Project 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <div class="container-image">
-              <img src="https://iqralabs.co.id/assets/logo-primary-8774f89a.png" alt="Iqralabs">
-            </div>
-            <div class="card-body text-center">
-              <a href="https://iqralabs.co.id/" target="_blank">Visit Website Iqralabs</a>
-            </div>
+  
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <h2 class="text-center">Portfolio</h2>
+    <p class="text-center mb-5">Check out some of my projects:</p>
+    <div class="row">
+      <!-- Portfolio Item 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="portfolio-item">
+          <img src="https://iqralabs.co.id/assets/logo-primary-8774f89a.png" alt="Iqralabs" class="img-fluid">
+          <div class="overlay">
+            <a href="https://iqralabs.co.id/" target="_blank">Visit Website Iqralabs</a>
           </div>
         </div>
-        <!-- Project 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <div class="container-image">
-              <img src="https://vissasa.id/wp-content/uploads/2023/06/logovissasa2.png" alt="Vissasa">
-            </div>
-            <div class="card-body text-center">
-              <a href="https://vissasa.id/" target="_blank">Visit Website Vissasa</a>
-            </div>
+      </div>
+      <!-- Portfolio Item 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="portfolio-item">
+          <img src="https://vissasa.id/wp-content/uploads/2023/06/logovissasa2.png" alt="Vissasa" class="img-fluid">
+          <div class="overlay">
+            <a href="https://vissasa.id/" target="_blank">Visit Website Vissasa</a>
           </div>
         </div>
-        <!-- Project 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <div class="container-image">
-              <img src="https://romaxinternusa.com/wp-content/uploads/2024/04/Picture1.png" alt="Rromaxinternusa">
-            </div>
-            <div class="card-body text-center">
-              <a href="https://romaxinternusa.com/" target="_blank">Visit Website Rromaxinternusa</a>
-            </div>
+      </div>
+      <!-- Portfolio Item 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="portfolio-item">
+          <img src="https://romaxinternusa.com/wp-content/uploads/2024/04/Picture1.png" alt="Rromaxinternusa" class="img-fluid">
+          <div class="overlay">
+            <a href="https://romaxinternusa.com/" target="_blank">Visit Website Rromaxinternusa</a>
           </div>
         </div>
-        <!-- Project 4 -->
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <div class="container-image">
-              <img src="https://img.era.id/OF4HwTHEYn-MhWQ3r8MNqp4KwfePDSUCrhkr5c0idq8/rs:fill:95:24/g:sm/bG9jYWw6Ly8vc2V0dGluZ3MvU2VwdGVtYmVyMjAyMi9qczFONTFBWlVtWWNKRzN3MnNxbi5wbmc.png" alt="Era">
-            </div>
-            <div class="card-body text-center">
-              <a href="https://era.id/" target="_blank">Visit Website Era</a>
-            </div>
+      </div>
+      <!-- Portfolio Item 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="portfolio-item">
+          <img src="https://img.era.id/OF4HwTHEYn-MhWQ3r8MNqp4KwfePDSUCrhkr5c0idq8/rs:fill:95:24/g:sm/bG9jYWw6Ly8vc2V0dGluZ3MvU2VwdGVtYmVyMjAyMi9qczFONTFBWlVtWWNKRzN3MnNxbi5wbmc.png" alt="Era" class="img-fluid">
+          <div class="overlay">
+            <a href="https://era.id/" target="_blank">Visit Website Era</a>
           </div>
         </div>
-        <!-- Project 5 -->
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <div class="container-image">
-              <img src="https://imgsrv2.voi.id/3EYqG_W4eoUoUbvpd9gZitNCwQLZJBbJ9juEB37CHbI/fill/72/37/sm/1/bG9jYWw6Ly8vaW1hZ2VzL2xvZ28vbG9nby13bS12b2kucG5n.png" alt="Voi">
-            </div>
-            <div class="card-body text-center">
-              <a href="https://voi.id/" target="_blank">Visit Website Voi</a>
-            </div>
+      </div>
+      <!-- Portfolio Item 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="portfolio-item">
+          <img src="https://imgsrv2.voi.id/3EYqG_W4eoUoUbvpd9gZitNCwQLZJBbJ9juEB37CHbI/fill/72/37/sm/1/bG9jYWw6Ly8vaW1hZ2VzL2xvZ28vbG9nby13bS12b2kucG5n.png" alt="Voi" class="img-fluid">
+          <div class="overlay">
+            <a href="https://voi.id/" target="_blank">Visit Website Voi</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
